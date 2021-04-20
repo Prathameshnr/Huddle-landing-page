@@ -1,0 +1,133 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --open-sans: "Open Sans", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--violet);
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 100%;
+  color: #ffffff;
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.logo {
+  height: 2.1875rem;
+  margin-bottom: 3.75rem;
+}
+
+.image-container img {
+  height: auto;
+  width: 100%;
+}
+
+/* .image-container img {
+  margin: auto;
+  width: 100%;
+  max-width: 930px;
+} */
+
+.text-container {
+  text-align: center;
+}
+
+.text-container h1 {
+  font-size: 1.625rem;
+  font-family: var(--poppins);
+  margin-bottom: 1.25rem;
+}
+
+.text-container p {
+  font-family: var(--open-sans);
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 1.875rem;
+}
+
+.btn {
+  font-size: 0.875rem;
+  font-family: var(--poppins);
+  padding: 0.8rem 6rem;
+  border: none;
+  border-radius: 2rem;
+  color: hsl(257, 40%, 55%);
+  box-shadow: 0 0.3125rem 1.25rem hsl(0, 0%, 0%, 0.4);
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.btn:hover,
+.btb:focus {
+  background-color: var(--soft-magenta);
+  color: #ffffff;
+}
+
+.social-links {
+  display: flex;
+  margin: 65px;
+  justify-content: center;
+}
+
+.social-links i {
+  padding: 0.625rem;
+  margin-right: 0.9375rem;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: color, border 100ms ease-in-out;
+}
+
+.social-links i:hover {
+  color: var(--soft-magenta);
+  border: 1px solid var(--soft-magenta);
+}
+
+/* Media Queries*/
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .image-container img {
+    flex: 1;
+    margin-bottom: 1.5625rem;
+  }
+
+  .text-container {
+    flex: 1;
+    padding: 5em;
+    text-align: left;
+    max-width: 50rem;
+  }
+
+  .social-links{
+      justify-content: flex-end;
+  }
+}
